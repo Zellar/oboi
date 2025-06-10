@@ -10,6 +10,7 @@
     <meta name="format-detection" content="email=no">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Oboitrade</title>
 </head>
@@ -17,12 +18,41 @@
     <header>
         <section class="hero">
             <div class="hero__block hero__block--img">
-                <img src="./img/logo.webp" alt="Oboitrade logo">
+                <img class="hero__logo" src="./img/logo.svg" alt="Oboitrade logo">
             </div>
             <div class="hero__block hero__block--text">
-                <h1 class="h1">
-                    Одевайте <br> стены клиентов <br> <span class="h1__color-text">вместе с нами!</span>
-                </h1>
+
+                <div class="swiper swiper-hero">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h1 class="h1">
+                                Одевайте <br> стены клиентов <br> <span class="h1__color-text">вместе с нами!</span>
+                            </h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hero_block__info">
+                                <div class="infograph">
+                                    <span class="infograph__big-text">
+                                        20+ лет
+                                    </span>
+                                    <span class="infograph__text">
+                                        в индустрии ремонта
+                                    </span>
+                                </div>
+                                
+                                <div class="infograph">
+                                    <span class="infograph__big-text">
+                                        200+ тыс.
+                                    </span>
+                                    <span class="infograph__text">
+                                        квартир по России с обоями от Oboitrade
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </header>
@@ -46,7 +76,45 @@
                                 >30&nbsp;000 видов
                             </span> 
                         </div>
-                        <img class="card__img" src="./img/card-img-1.webp" alt="обои">
+                        <!-- <img class="card__img" src="./img/card-img-1.webp" alt="обои"> -->
+                        <picture>
+                            <!-- Мобильные устройства: WebP Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-1@2x.webp 2x, ./img/mobile/card-img-1.webp 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Мобильные устройства: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-1@2x.jpg 2x, ./img/mobile/card-img-1.jpg 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Десктоп: WebP Retina -->
+                            <source 
+                              srcset="./img/card-img-1@2x.webp 2x, ./img/card-img-1.webp 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Десктоп: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/card-img-1@2x.jpg 2x, ./img/card-img-1.jpg 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                            <img 
+                              class="card__img" 
+                              src="./img/card-img-1.jpg" 
+                              alt="обои"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                        </picture>
                     </div>
                     <div class="card card--img">
                         <div class="card__text-wrapper">
@@ -60,7 +128,45 @@
                                 Колеровка <br> в любой цвет
                             </span> 
                         </div>
-                        <img class="card__img" src="./img/card-img-2.webp" alt="цвет">
+                        <!-- <img class="card__img" src="./img/card-img-2.webp" alt="цвет"> -->
+                        <picture>
+                            <!-- Мобильные устройства: WebP Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-2@2x.webp 2x, ./img/mobile/card-img-2.webp 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Мобильные устройства: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-2@2x.jpg 2x, ./img/mobile/card-img-2.jpg 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Десктоп: WebP Retina -->
+                            <source 
+                              srcset="./img/card-img-2@2x.webp 2x, ./img/card-img-2.webp 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Десктоп: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/card-img-2@2x.jpg 2x, ./img/card-img-2.jpg 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                            <img 
+                              class="card__img" 
+                              src="./img/card-img-2.jpg" 
+                              alt="обои"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                        </picture>
                     </div>
                 </div>
                 
@@ -92,7 +198,45 @@
                     <h2 class="h2">Шоурумы <span class="another-text-color">в 30 минутной доступности от любого ЖК</span></h2>
                 </div>
                     <div class="map-block">
-                        <img src="./img/map.webp" alt="" class="map-block__map">
+                            <picture>
+                            <!-- Мобильные устройства: WebP Retina -->
+                            <source 
+                              srcset="./img/mobile/map@2x.webp 2x, ./img/mobile/map.webp 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Мобильные устройства: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/mobile/map@2x.png 2x, ./img/mobile/map.png 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/png"
+                            >
+                          
+                            <!-- Десктоп: WebP Retina -->
+                            <source 
+                              srcset="./img/map@2x.webp 2x, ./img/map.webp 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Десктоп: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/map@2x.png 2x, ./img/map.png 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/png"
+                            >
+                          
+                            <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                            <img 
+                              class="map-block__map" 
+                              src="./img/map.png" 
+                              alt="карта"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                        </picture>
+                        <!-- <img src="./img/map.webp" alt="" class="map-block__map"> -->
                         <div class="map-block__text-block">
                             <ul class="map-block__list">
                                 <li class="map-block__list-item">
@@ -139,18 +283,18 @@
                         </div>
                         <div class="map-block__text-block map-block__text-block--another-style">
                             <div class="map-block__list-item">
-                                <span class="map-block__list-title">
+                                <span class="map-block__list-title map-block__list-title--big">
                                     >200 м<sup>2</sup>
                                 </span>
-                                <span class="map-block__list-text">
-                                    в индустрии ремонта
+                                <span class="map-block__list-text map-block__list-text--big">
+                                    средная площадь шоурума
                                 </span>
                             </div>
                             <div class="map-block__list-item">
-                                <span class="map-block__list-title">
+                                <span class="map-block__list-title map-block__list-title--big">
                                     >1&nbsp;000
                                 </span>
-                                <span class="map-block__list-text">
+                                <span class="map-block__list-text map-block__list-text--big">
                                     наименований в наличии
                                 </span>
                             </div>
@@ -171,8 +315,84 @@
                                 КАТАЛОГИ
                             </span>
                         </div>
-                        <img class="card__img" src="./img/card-img-3.webp" alt="обои">
-                        <img class="card__decor-1" src="./img/card-decor-1.webp" alt="">
+                        <!-- <img class="card__img" src="./img/card-img-3.webp" alt="обои"> -->
+                        <picture>
+                            <!-- Мобильные устройства: WebP Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-3@2x.webp 2x, ./img/mobile/card-img-3.webp 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Мобильные устройства: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-3@2x.jpg 2x, ./img/mobile/card-img-3.jpg 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Десктоп: WebP Retina -->
+                            <source 
+                              srcset="./img/card-img-3@2x.webp 2x, ./img/card-img-3.webp 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Десктоп: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/card-img-3@2x.jpg 2x, ./img/card-img-3.jpg 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                            <img 
+                              class="card__img" 
+                              src="./img/card-img-3.jpg" 
+                              alt="обои"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                        </picture>
+                        <picture>
+                            <!-- Мобильные устройства: WebP Retina -->
+                            <source 
+                              srcset="./img/mobile/card-decor-1@2x.webp 2x, ./img/mobile/card-decor-1.webp 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Мобильные устройства: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/mobile/card-decor-1@2x.png 2x, ./img/mobile/card-decor-1.png 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/png"
+                            >
+                          
+                            <!-- Десктоп: WebP Retina -->
+                            <source 
+                              srcset="./img/card-decor-1@2x.webp 2x, ./img/card-decor-1.webp 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Десктоп: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/card-decor-1@2x.png 2x, ./img/card-decor-1.png 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/png"
+                            >
+                          
+                            <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                            <img 
+                              class="card__decor-1" 
+                              src="./img/card-decor-1.png" 
+                              alt="цвет"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                        </picture>
+                        <!-- <img class="card__decor-1" src="./img/card-decor-1.webp" alt=""> -->
                     </div>
 
                     <div class="card card--horyzontal card--img">
@@ -181,8 +401,84 @@
                                 ОБРАЗЦЫ <br> И ВЫКРАСЫ
                             </span>
                         </div>
-                        <img class="card__img" src="./img/card-img-4.webp" alt="цвет">
-                        <img class="card__decor-2" src="./img/card-decor-2.webp" alt="">
+                        <!-- <img class="card__img" src="./img/card-img-4.webp" alt="цвет"> -->
+                        <picture>
+                            <!-- Мобильные устройства: WebP Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-4@2x.webp 2x, ./img/mobile/card-img-4.webp 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Мобильные устройства: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/mobile/card-img-4@2x.jpg 2x, ./img/mobile/card-img-4.jpg 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Десктоп: WebP Retina -->
+                            <source 
+                              srcset="./img/card-img-4@2x.webp 2x, ./img/card-img-4.webp 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Десктоп: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/card-img-4@2x.jpg 2x, ./img/card-img-4.jpg 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/jpeg"
+                            >
+                          
+                            <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                            <img 
+                              class="card__img" 
+                              src="./img/card-img-4.jpg" 
+                              alt="цвет"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                        </picture>
+                        <picture>
+                            <!-- Мобильные устройства: WebP Retina -->
+                            <source 
+                              srcset="./img/mobile/card-decor-2@2x.webp 2x, ./img/mobile/card-decor-2.webp 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Мобильные устройства: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/mobile/card-decor-2@2x.png 2x, ./img/mobile/card-decor-2.png 1x" 
+                              media="(max-width: 767px)" 
+                              type="image/png"
+                            >
+                          
+                            <!-- Десктоп: WebP Retina -->
+                            <source 
+                              srcset="./img/card-decor-2@2x.webp 2x, ./img/card-decor-2.webp 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/webp"
+                            >
+                          
+                            <!-- Десктоп: JPG fallback Retina -->
+                            <source 
+                              srcset="./img/card-decor-2@2x.png 2x, ./img/card-decor-2.png 1x" 
+                              media="(min-width: 768px)" 
+                              type="image/png"
+                            >
+                          
+                            <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                            <img 
+                              class="card__decor-2" 
+                              src="./img/card-decor-2.png" 
+                              alt="цвет"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                        </picture>
+                        <!-- <img class="card__decor-2" src="./img/card-decor-2.webp" alt=""> -->
                     </div>
 
                 </div>
@@ -190,7 +486,30 @@
                     <span class="info-block__text info-block__text--uppercase">СУПЕР-БЫСТРАЯ <br> ДОСТАВКА</span>
                     <div class="info-block__decor-wrapper">
                         <div class="info-block__decor-img">
-                            <img src="./img/auto-img.webp" alt="">
+                            <!-- <img src="./img/auto-img.webp" alt=""> -->
+                            <picture>                           
+                                <!-- Десктоп: WebP Retina -->
+                                <source 
+                                  srcset="./img/auto-img@2x.webp 2x, ./img/auto-img.webp 1x"
+                                  media="(min-width: 768px)" 
+                                  type="image/webp"
+                                >
+                              
+                                <!-- Десктоп: JPG fallback Retina -->
+                                <source 
+                                  srcset="./img/auto-img@2x.png 2x, ./img/auto-img.png 1x" 
+                                  media="(min-width: 768px)"
+                                  type="image/png"
+                                >
+                              
+                                <!-- Fallback-изображение (на случай, если браузер не поддерживает <picture>) -->
+                                <img 
+                                  src="./img/auto-img.png" 
+                                  alt="цвет"
+                                  loading="lazy"
+                                  decoding="async"
+                                >
+                            </picture>
                         </div>
                         <span class="info-block__text">Не нужно ждать <br> и не нужно никуда ехать</span>
                     </div>
@@ -351,7 +670,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <img src="./img/logo.webp" alt="" class="footer-logo">
+                <img src="./img/logo.svg" alt="" class="footer-logo">
                 <nav class="footer__nav">
                 <div class="nav">
                     <button class="nav__title" type="button">
@@ -459,6 +778,7 @@
             </button>
         </div>
     </div>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

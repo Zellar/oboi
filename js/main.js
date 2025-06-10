@@ -139,3 +139,39 @@ document.querySelectorAll('.nav__title[type="button"]').forEach(title => {
         }
     });
  });
+
+//  hero swiper
+
+const swiper = new Swiper('.swiper-hero', {
+  direction: 'vertical',
+  slidesPerView: 1,
+  allowTouchMove: false,
+  simulateTouch: false,
+  speed: 800,
+});
+
+let triggered = false;
+
+function onScrollOnce() {
+  if (triggered) return;
+  triggered = true;
+
+  swiper.slideNext();
+  window.removeEventListener('scroll', onScrollOnce);
+}
+
+window.addEventListener('scroll', onScrollOnce);
+
+// 🔧 Устанавливаем высоту swiper по .hero__block--text
+function syncHeightToHero() {
+  const heroBlock = document.querySelector('.hero__block--text');
+  const swiperEl = document.querySelector('.swiper-hero');
+
+  if (heroBlock && swiperEl) {
+    swiperEl.style.maxHeight = `${heroBlock.offsetHeight}px`;
+  }
+}
+
+// Инициализация и ресайз
+syncHeightToHero();
+window.addEventListener('resize', syncHeightToHero);
