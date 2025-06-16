@@ -140,38 +140,23 @@ document.querySelectorAll('.nav__title[type="button"]').forEach(title => {
     });
  });
 
-//  hero swiper
+//  hero slide
 
-const swiper = new Swiper('.swiper-hero', {
-  direction: 'vertical',
-  slidesPerView: 1,
-  allowTouchMove: false,
-  simulateTouch: false,
-  speed: 800,
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "+=100%",
+    scrub: true,
+    anticipate: true,
+    pin: true
+  }
 });
 
-let triggered = false;
+tl.to(".hero-slide--1", { y: "-200%", opacity: 0, ease: "power2.out" }, 0)
+  .fromTo(".hero-slide--2", { y: "100%", opacity: 0 }, { y: "0%", opacity: 1, ease: "power2.out" }, 0);
 
-function onScrollOnce() {
-  if (triggered) return;
-  triggered = true;
 
-  swiper.slideNext();
-  window.removeEventListener('scroll', onScrollOnce);
-}
 
-window.addEventListener('scroll', onScrollOnce);
-
-// 🔧 Устанавливаем высоту swiper по .hero__block--text
-function syncHeightToHero() {
-  const heroBlock = document.querySelector('.hero__block--text');
-  const swiperEl = document.querySelector('.swiper-hero');
-
-  if (heroBlock && swiperEl) {
-    swiperEl.style.maxHeight = `${heroBlock.offsetHeight}px`;
-  }
-}
-
-// Инициализация и ресайз
-syncHeightToHero();
-window.addEventListener('resize', syncHeightToHero);

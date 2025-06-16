@@ -21,41 +21,36 @@
                 <img class="hero__logo" src="./img/logo.svg" alt="Oboitrade logo">
             </div>
             <div class="hero__block hero__block--text">
-
-                <div class="swiper swiper-hero">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <h1 class="h1">
-                                Одевайте <br> стены клиентов <br> <span class="h1__color-text">вместе с нами!</span>
-                            </h1>
+                <div class="hero_block__slide-wrapper">
+                    <h1 class="h1 hero-slide hero-slide--1">
+                        Одевайте <br> стены клиентов <br> <span class="h1__color-text">вместе с нами!</span>
+                    </h1>
+                    <div class="hero_block__info hero-slide hero-slide--2">
+                        <div class="infograph">
+                            <span class="infograph__big-text">
+                                20+ лет
+                            </span>
+                            <span class="infograph__text">
+                                в индустрии ремонта
+                            </span>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="hero_block__info">
-                                <div class="infograph">
-                                    <span class="infograph__big-text">
-                                        20+ лет
-                                    </span>
-                                    <span class="infograph__text">
-                                        в индустрии ремонта
-                                    </span>
-                                </div>
-                                
-                                <div class="infograph">
-                                    <span class="infograph__big-text">
-                                        200+ тыс.
-                                    </span>
-                                    <span class="infograph__text">
-                                        квартир по России с обоями от Oboitrade
-                                    </span>
-                                </div>
-                            </div>
+                        
+                        <div class="infograph">
+                            <span class="infograph__big-text">
+                                200+ тыс.
+                            </span>
+                            <span class="infograph__text">
+                                квартир по России с обоями от Oboitrade
+                            </span>
                         </div>
                     </div>
                 </div>
+                
 
             </div>
         </section>
     </header>
+    
     <main>
         <div class="container">
             <section class="section">
@@ -582,7 +577,7 @@
                         </div>
                         <div class="card__footer">
                             <button class="btn btn--another-style" data-popup-target="popup">
-                                Заполнить форму
+                                Узнать подробнее
                             </button>
                         </div>
                     </div>
@@ -715,7 +710,7 @@
     <div class="popup" data-popup="popup">
         <div class="popup__body">
             <div class="popup__title">
-                Бонусная программа <span class="another-text-color">для дизайнеров-партнёров</span> <img src="./img/box-icon.svg" alt="">
+                Бонусная программа <span class="another-text-color">для&nbsp;дизайнеров-партнёров</span> <img src="./img/box-icon.svg" alt="">
             </div>
             <form id="prog-form" action="" method="" class="popup__form">
                 <label class="popup__label">
@@ -778,7 +773,10 @@
             </button>
         </div>
     </div>
-    <script src="./js/swiper-bundle.min.js"></script>
+    
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
