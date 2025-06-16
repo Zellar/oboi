@@ -1547,6 +1547,9 @@ body.popup-open {
     .map-block__text-block--another-style .map-block__list-item {
         margin-bottom: 15px;
     }
+    .infograph__big-text {
+        margin-bottom: 10px;
+    }
 }
 
 /* 767 end */
