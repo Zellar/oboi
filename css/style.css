@@ -144,8 +144,32 @@
 
 @font-face {
     font-family: 'DrukCyr';
+    src: url('../fonts/DrukCyr-Super.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DrukCyr';
+    src: url('../fonts/DrukCyr-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DrukCyr';
+    src: url('../fonts/DrukCyr-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DrukCyr';
     src: url('../fonts/DrukCyr-Heavy.woff2') format('woff2');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -797,6 +821,7 @@ a.nav__title:hover {
 .map-block__text-block--another-style .map-block__list-title {
     font-size: 48px;
     font-weight: 900;
+    margin-bottom: 5px;
 }
 
 .map-block__map {
